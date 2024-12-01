@@ -1,0 +1,13 @@
+id: string @index(exact) .
+title: string @index(term) .
+url: string @index(exact) .
+type: string @index(exact) .
+embedding: float32vector @index(hnsw(metric:"cosine")) .
+
+type Content {
+  id
+  title
+  url
+  type
+  embedding
+}
